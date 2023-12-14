@@ -3,6 +3,7 @@
 -- Quantity in the table items can be negative
 
 DELIMITER $$ ; -- change delimiter so semicolon can be included in trigger body
+DROP TRIGGER IF EXISTS `decrease_quantity` $$
 
 CREATE TRIGGER `decrease_quantity`
 AFTER INSERT ON `orders`
