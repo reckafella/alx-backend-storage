@@ -1,4 +1,4 @@
 // -- deletes all documents with name="Holberton school" in the collection school
 // -- database name will be passed as option of mongo command
 
-db.school.remove({ name: "Holberton school" }, false);
+db.school.deleteMany({ name: "Holberton school" });
