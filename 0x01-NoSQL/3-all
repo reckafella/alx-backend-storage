@@ -1,4 +1,4 @@
 // list all documents in the collection school
 // * database name will be passed as an option of mongo command
 
-db.school.find()
+db.school.find();
