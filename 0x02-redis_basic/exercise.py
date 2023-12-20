@@ -38,14 +38,14 @@ class Cache:
         result = self._redis.get(key)
         return fn(result) if result else None
 
-    def get_str(self, data: bytes) -> str:
+    def get_str(self, key: str) -> str:
         '''
         returns a string representation of data received from redis
         '''
-        return data.decode('utf-8')
+        return self.get(key, lambda x: x.decode('utf-8'))
 
-    def get_int(self, data: bytes) -> int:
+    def get_int(self, key: str) -> int:
         '''
         return integer representation of data received from redis
         '''
-        return int(self.get_str(data=data))
+        return self.get(key, lambda x: int(x.decode('utf-8')))
