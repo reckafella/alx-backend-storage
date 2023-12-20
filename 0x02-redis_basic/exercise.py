@@ -6,6 +6,7 @@ import redis
 import uuid
 from typing import Union
 
+
 class Cache:
     '''
     stores an instance of the Redis client
