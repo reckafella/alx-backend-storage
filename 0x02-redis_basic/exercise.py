@@ -48,4 +48,4 @@ class Cache:
         '''
         return integer representation of data received from redis
         '''
-        return self.get(key, lambda x: int(x.decode('utf-8')))
+        return self.get(key, lambda x: int(x))
